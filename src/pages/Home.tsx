@@ -1,18 +1,18 @@
 /*
-import { ProductCard } from '../entities/product';
 import { BrandCard } from '../entities/brand';
 import { BlogCard } from '../entities/blog';
-import { Loading, ErrorMessage } from '../shared/ui';
-import { GridContainer } from '../shared/ui/GridContainer';
-import { useProducts, useBrands, useBlogPosts } from '../shared/hooks';
 */
 import { Layout } from '../shared/ui/Layout';
 import nikeIcon from '../assets/icons/nike.svg'
 import FiltersList from '../entities/filters/FiltersList';
+import { useProducts  } from '../shared/hooks';
+import { ProductCard } from '../entities/product';
+import { GridContainer } from '../shared/ui/GridContainer';
+import { Loading, ErrorMessage } from '../shared/ui';
 
 function Home() {
-  /*
   const { products, loading: productsLoading, error: productsError, toggleLike } = useProducts();
+  /*
   const { brands, loading: brandsLoading, error: brandsError } = useBrands();
   const { blogPosts, loading: blogLoading, error: blogError } = useBlogPosts();
   */
@@ -33,6 +33,18 @@ function Home() {
         </div>
       </div>
       <FiltersList />
+      <div className='flex mb-20'>
+        <div className='mx-auto mt-10 w-[1240px]'>
+          <div className='text-[34px] font-medium mb-5'>Новинки</div>
+          {productsLoading ? (<Loading />) : productsError ? (<ErrorMessage message={productsError} />) : (
+            <GridContainer>
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
+              ))}
+            </GridContainer>
+          )}
+        </div>
+      </div>
     </Layout>
   );
 }

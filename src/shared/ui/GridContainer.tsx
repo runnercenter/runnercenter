@@ -23,7 +23,7 @@ const gapConfig = {
 
 export function GridContainer({ 
   children, 
-  columns = 4, 
+  columns = 5, 
   gap = 'md', 
   className = '' 
 }: GridContainerProps) {

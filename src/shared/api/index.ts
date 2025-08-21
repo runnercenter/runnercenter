@@ -4,34 +4,41 @@ import type { Product, Brand, BlogPost } from '../types';
 const mockProducts: Product[] = [
   {
     id: 1,
-    name: "Nike Air Max 270",
-    image: "https://via.placeholder.com/300x300?text=Nike+Air+Max+270",
-    price: 12000,
-    discountPrice: 9600,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
     discount: 20,
     isLiked: false
   },
   {
     id: 2,
-    name: "Adidas Ultraboost 22",
-    image: "https://via.placeholder.com/300x300?text=Adidas+Ultraboost",
-    price: 15000,
-    isLiked: true
-  },
-  {
-    id: 3,
-    name: "New Balance 990v5",
-    image: "https://via.placeholder.com/300x300?text=New+Balance+990",
-    price: 18000,
-    discountPrice: 14400,
-    discount: 25,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
     isLiked: false
   },
   {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
     id: 4,
-    name: "Asics Gel Nimbus 24",
-    image: "https://via.placeholder.com/300x300?text=Asics+Gel+Nimbus",
-    price: 13500,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/4.jpg",
+    price: 17990,
+    isLiked: false
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
     isLiked: false
   }
 ];
