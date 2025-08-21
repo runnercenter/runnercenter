@@ -59,7 +59,7 @@ export function ProductCard({ product, onToggleLike }: ProductCardProps) {
               <span className="text-xl font-bold text-red-600">
                 {product.discountPrice?.toLocaleString()} ₸
               </span>
-              <span className="text-lg text-gray-500 line-through">
+              <span className="text-lg text-gray-500 line-through font-normal">
                 {product.price.toLocaleString()} ₸
               </span>
             </>

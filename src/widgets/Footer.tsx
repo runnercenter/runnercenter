@@ -10,7 +10,7 @@ export function Footer({ className = '' }: FooterProps) {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Runner Center</h3>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-300 mb-4 font-normal">
               Ваш надежный партнер в мире спортивной обуви. Мы предлагаем только качественные кроссовки 
               от ведущих мировых брендов.
             </p>
@@ -37,11 +37,11 @@ export function Footer({ className = '' }: FooterProps) {
           <div>
             <h4 className="text-lg font-semibold mb-4">Быстрые ссылки</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">О нас</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Каталог</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Акции</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Доставка</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Возврат</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors font-normal">О нас</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors font-normal">Каталог</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors font-normal">Акции</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors font-normal">Доставка</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white transition-colors font-normal">Возврат</a></li>
             </ul>
           </div>
 
@@ -49,24 +49,24 @@ export function Footer({ className = '' }: FooterProps) {
           <div>
             <h4 className="text-lg font-semibold mb-4">Контакты</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>+7 (777) 123-45-67</li>
-              <li>info@runnercenter.kz</li>
-              <li>г. Алматы, ул. Абая 150</li>
-              <li>Пн-Вс: 10:00 - 21:00</li>
+              <li className="font-normal">+7 (777) 123-45-67</li>
+              <li className="font-normal">info@runnercenter.kz</li>
+              <li className="font-normal">г. Алматы, ул. Абая 150</li>
+              <li className="font-normal">Пн-Вс: 10:00 - 21:00</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
+          <p className="text-gray-300 text-sm font-normal">
             © 2025 Runner Center. Все права защищены.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
+            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors font-normal">
               Политика конфиденциальности
             </a>
-            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors">
+            <a href="#" className="text-gray-300 hover:text-white text-sm transition-colors font-normal">
               Условия использования
             </a>
           </div>
