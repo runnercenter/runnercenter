@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import closeLogo from '../assets/icons/close.svg'
 import keyLogo from '../assets/icons/key.svg'
 import searchLogo from '../assets/icons/search.svg'
@@ -58,10 +59,10 @@ export function Header({ className = '' }: HeaderProps) {
 
       <div className=''>
         <div className="w-[1240px] mx-auto text-[14px] flex py-3 items-center px-2">
-          <a href="/" className='flex gap-4 items-center'>
+          <Link to="/runnercenter/" className='flex gap-4 items-center'>
             <img src="/runnercenter/logo.png" />
             <div className='text-[#1D1D35]'>Интернет-магазин<br/>беговой экипировки</div>
-          </a>
+          </Link>
           <div className='flex items-center ml-20'>
             <img src={searchLogo} alt="" className="cursor-pointer object-contain" />
             <input 

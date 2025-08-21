@@ -16,7 +16,7 @@ export function ProductCard({ product, onToggleLike }: ProductCardProps) {
   };
 
   return (
-    <div className="border border-[#E4E4E4]">
+    <a href="/runnercenter/shoes" className="block border border-[#E4E4E4]">
       <div className="relative p-5 py-12">
         <img
           src={product.image}
@@ -65,6 +65,6 @@ export function ProductCard({ product, onToggleLike }: ProductCardProps) {
           )}
         </div>
       </div>
-    </div>
+    </a>
   );
 }
