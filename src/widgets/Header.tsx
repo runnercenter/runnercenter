@@ -59,7 +59,7 @@ export function Header({ className = '' }: HeaderProps) {
 
       <div className=''>
         <div className="w-[1240px] mx-auto text-[14px] flex py-3 items-center px-2">
-          <Link to="/runnercenter/" className='flex gap-4 items-center'>
+          <Link to="/" className='flex gap-4 items-center'>
             <img src="/runnercenter/logo.png" />
             <div className='text-[#1D1D35]'>Интернет-магазин<br/>беговой экипировки</div>
           </Link>
