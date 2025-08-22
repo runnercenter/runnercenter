@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../../pages/Home';
 import Shoes from '../../pages/Shoes';
 import { useEffect } from 'react';
+import Category from '../../pages/Category';
 
 export function AppRouter() {
   useEffect(() => {
@@ -20,6 +21,7 @@ export function AppRouter() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shoes" element={<Shoes />} />
+        <Route path="/category" element={<Category />} />
       </Routes>
     </Router>
   );

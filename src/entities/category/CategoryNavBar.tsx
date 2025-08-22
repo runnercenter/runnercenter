@@ -28,13 +28,21 @@ export function CategoryNavBar() {
         },
     ]);
     const [openTab, setOpenTab] = useState(0);
+    const [isAnimating, setIsAnimating] = useState(false);
+    const [showDropdown, setShowDropdown] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
 
-    // Close dropdown on outside click
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (navRef.current && !navRef.current.contains(event.target as Node)) {
-                setOpenTab(0);
+                if (openTab > 0) {
+                    setIsAnimating(true);
+                    setTimeout(() => {
+                        setOpenTab(0);
+                        setShowDropdown(false);
+                        setIsAnimating(false);
+                    }, 300);
+                }
             }
         }
         if (openTab > 0) {
@@ -48,7 +56,33 @@ export function CategoryNavBar() {
     }, [openTab]);
 
     const handleTabClick = (tabId: number) => {
-        setOpenTab((prev) => (prev === tabId ? 0 : tabId));
+        if (openTab === tabId) {
+            // Closing the current tab
+            setIsAnimating(true);
+            setTimeout(() => {
+                setOpenTab(0);
+                setShowDropdown(false);
+                setIsAnimating(false);
+            }, 300); // Full animation duration for closing
+        } else if (openTab === 0) {
+            // Opening a tab
+            setOpenTab(tabId);
+            setShowDropdown(true);
+            // Trigger animation after DOM update
+            setTimeout(() => {
+                setIsAnimating(false);
+            }, 10);
+            setIsAnimating(true);
+        } else {
+            // Switching between tabs
+            setIsAnimating(true);
+            setTimeout(() => {
+                setOpenTab(tabId);
+                setTimeout(() => {
+                    setIsAnimating(false);
+                }, 10);
+            }, 150);
+        }
     };
 
     return (
@@ -63,7 +97,13 @@ export function CategoryNavBar() {
                             tabIndex={0}
                         >
                             <div className="uppercase">{tab.name}</div>
-                            <img src={arrowDownIcon} alt="" className="cursor-pointer object-contain" />
+                            <img 
+                                src={arrowDownIcon} 
+                                alt="" 
+                                className={`cursor-pointer object-contain transition-transform duration-300 ease-out ${
+                                    openTab === tab.id ? 'rotate-180' : 'rotate-0'
+                                }`} 
+                            />
                         </div>
                     ))}
                     <div className="flex items-center gap-2 cursor-pointer">
@@ -81,9 +121,12 @@ export function CategoryNavBar() {
                     </div>
                 </div>
             </div>
-            {/* Dropdown white banner for tab content */}
-            {openTab > 0 && (
-                <div className="absolute left-0 top-full w-full flex justify-center z-20 bg-white">
+            {showDropdown && (
+                <div className={`absolute left-0 top-full w-full flex justify-center z-20 bg-white shadow-lg transition-all duration-300 ease-out ${
+                    openTab > 0 && !isAnimating 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 -translate-y-2'
+                }`}>
                   <div className="w-[1240px] min-h-[180px] py-6 px-8 mt-2">
                     {openTab === 1 && <ShoesTab />}
                     {openTab === 2 && <SpikeTab />}

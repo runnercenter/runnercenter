@@ -49,11 +49,15 @@ export default function FiltersList() {
         <div className='mt-10 flex'>
             <div className='mx-auto flex gap-5'>
                 {filters.map((filter) => (
-                    <div key={filter.name} className='flex flex-col items-center'>
-                        <div className="w-[103px] h-[103px] bg-[#EFEFEF] rounded-full flex">
-                            <img src={`/runnercenter/filter/${filter.icon}`} className="mx-auto my-auto" alt="Filter Icon" />
+                    <div key={filter.name} className='flex flex-col items-center group cursor-pointer'>
+                        <div className="w-[103px] h-[103px] bg-[#EFEFEF] group-hover:bg-[#061A84] rounded-full flex transition-colors duration-300 ease-in-out">
+                            <img 
+                                src={`/runnercenter/filter/${filter.icon}`} 
+                                className="mx-auto my-auto transition-all duration-300 ease-in-out group-hover:brightness-0 group-hover:invert" 
+                                alt="Filter Icon" 
+                            />
                         </div>
-                        <span className='mt-2 text-[12px] text-[#6D6D6D] w-[100px] text-center'>{filter.name}</span>
+                        <span className='mt-2 text-[12px] text-[#6D6D6D] group-hover:text-[#1D1D35] w-[100px] text-center transition-colors duration-300 ease-in-out'>{filter.name}</span>
                     </div>
                 ))}
             </div>
