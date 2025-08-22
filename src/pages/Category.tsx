@@ -18,7 +18,7 @@ export default function Category() {
   ]);
   const [selectedType, setSelectedType] = useState<string | null>("Для трейла");
 
-  const [filters] = useState<Filter[]>([
+  const [filters, setFilters] = useState<Filter[]>([
     { name: "Цена", isOpen: true },
     { name: "Сезон", isOpen: true },
     { name: "Тип активности", isOpen: true },
@@ -77,6 +77,19 @@ export default function Category() {
                 <div className="text-[16px] text-[#1D1D35] font-light">Для мужчин</div>
                 <div className="text-[16px] text-[#1D1D35] font-light">Для женщин</div>
                 <div className="text-[16px] text-[#1D1D35] font-light">Для детей</div>
+              </div>
+              <div className="flex flex-col gap-y-[40px]">
+                {filters.map((filter) => (
+                  <div key={filter.name} className="flex items-center" onClick={() => {filter.isOpen = !filter.isOpen; setFilters([...filters])}}>
+                    <div className="text-[16px] text-[#1D1D35] font-light">{filter.name}</div> 
+                    <IoChevronDown 
+                      className={`text-[#6D6D6D] transition-transform duration-300 ml-auto ${
+                        filter.isOpen ? 'rotate-180' : 'rotate-0'
+                      }`}
+                      size={16}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
             <div className="w-[80%]">
