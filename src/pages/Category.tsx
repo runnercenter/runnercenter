@@ -125,6 +125,8 @@ export default function Category() {
                   )}
                 </div>
               </div>
+              {productsLoading && <div>Loading products...</div>}
+              {productsError && <div>Error loading products</div>}
               <GridContainer columns={4}>
                 {products.map((product) => (
                   <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
