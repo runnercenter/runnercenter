@@ -152,39 +152,39 @@ function ShoesTab() {
                     <div className="">
                         <div className="flex flex-col gap-[5px]">
                             <div className="text-[18px]">По сезону</div>
-                            <div className="text-[14px] font-thin underline">Летние</div>
-                            <div className="text-[14px] font-thin underline">Зимние</div>
-                            <div className="text-[14px] font-thin underline">Демисезонные</div>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Летние</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Зимние</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Демисезонные</a>
                         </div>
                         <div className="flex mt-5 flex-col gap-[5px]">
                             <div className="text-[18px]">По технологиям</div>
-                            <div className="text-[14px] font-thin underline">Карбоновая пластина</div>
-                            <div className="text-[14px] font-thin underline">Мембрана GORE-TEX</div>
-                            <div className="text-[14px] font-thin underline">Мембрана Shield</div>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Карбоновая пластина</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Мембрана GORE-TEX</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Мембрана Shield</a>
                         </div>
                     </div>
                     <div className="">
                         <div className="flex flex-col gap-[5px]">
                             <div className="text-[18px]">По типу пронации</div>
-                            <div className="text-[14px] font-thin underline">Без поддержки (Neutral)</div>
-                            <div className="text-[14px] font-thin underline">C поддержкой (Support)</div>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Без поддержки (Neutral)</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">C поддержкой (Support)</a>
                             <br/>
                         </div>
                         <div className="flex mt-5 flex-col gap-[5px]">
                             <div className="text-[18px]">По типу активности</div>
-                            <div className="text-[14px] font-thin underline">Тренировочные</div>
-                            <div className="text-[14px] font-thin underline">Внедорожники</div>
-                            <div className="text-[14px] font-thin underline">Марафонки</div>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Тренировочные</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Внедорожники</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Марафонки</a>
                         </div>
                     </div>
                     <div className="">
                         <div className="flex flex-col gap-[5px]">
                             <div className="text-[18px]">По брендам</div>
-                            <div className="text-[14px] font-thin underline">Brooks</div>
-                            <div className="text-[14px] font-thin underline">Hoka</div>
-                            <div className="text-[14px] font-thin underline">Mizuno</div>
-                            <div className="text-[14px] font-thin underline">Nike</div>
-                            <div className="text-[14px] font-thin underline">Saucony</div>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Brooks</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Hoka</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Mizuno</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Nike</a>
+                            <a href="/runnercenter/category" className="text-[14px] font-thin underline">Saucony</a>
                         </div>
                         <div className="flex mt-2 flex-col gap-[5px]">
                             <div className="text-[18px]">Ботинки</div>
