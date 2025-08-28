@@ -138,38 +138,120 @@ function Home() {
           )}
         </div>
       </div>
-      <div className='flex mb-20'>
-        <div className='mx-auto mt-10 w-[1240px]'>
-          <div className="flex gap-10">
-            <div className='bg-[#EFEFEF] px-10 py-8 relative'>
-              <div className='text-[18px] text-[#1D1D35]'>Кроссовки для бега</div>
-              <div className='flex mt-5 gap-10'>
-                <div className='flex flex-col gap-2 text-[16px] font-light'>
+      <div className='flex mb-2'>
+        <div className='mx-auto mt-1 w-[1240px]'>
+          <div className="flex gap-5">
+            <div className='bg-[#EFEFEF] px-10 py-8 h-[256px] w-[400px] relative'>
+              <div className='text-[18px] text-[#1D1D35] '>Кроссовки для бега</div>
+              <div className='flex mt-7 gap-8'>
+                <div className='flex flex-col gap-3 text-[16px] font-light underline'>
                   <div>Мужские</div>
                   <div>Женские</div>
                   <div>Детские</div>
                 </div>
                 <div>
-                  <img src="/runnercenter/cross.png" className='mb-5' />
+                  <img src="/runnercenter/Cross for run.png" className='mt-1 w-[250px]' />
                 </div>
+              </div>
+              
+              <div className='bg-[#C0FD14] absolute bottom-0 right-0 p-3 flex items-center justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200'>
+                <IoIosArrowForward size={18} />
+              </div>
+            </div>
+            <div className='bg-[#EFEFEF] px-10 py-8 h-[256px] w-[505px] relative'>
+              <div className='text-[18px] text-[#1D1D35]'>Одежда для бега мужская</div>
+              <div className='flex mt-7 gap-3'>
+                <div className='flex flex-col gap-3 text-[16px] font-light underline'>
+                  <div>Брюки</div>
+                  <div>Тайтсы</div>
+                  <div>Шорты</div>
+                  <div>Костюмы</div>
+                </div>
+                <div className='flex flex-col gap-3 text-[16px] font-light underline'>
+                  <div>Термобелье</div>
+                  <div>Куртки</div>
+                  <div>Футболки</div>
+                </div>
+              </div>
+              <div className='absolute bottom-0 right-0'>
+                <img src="/runnercenter/Mizuno men's sweatshirt.png" className='w-[245px] h-[245px]' />
               </div>
               <div className='bg-[#C0FD14] absolute bottom-0 right-0 p-3 flex items-center justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200'>
                 <IoIosArrowForward size={18} />
               </div>
             </div>
-            <div>Одежда для бега мужская</div>
-            <div>Детская<br/>одежда</div>
+            <div className='bg-[#EFEFEF] px-10 py-9 h-[256px] w-[296px] relative'>
+              <div className='text-[18px] text-[#1D1D35]'>Детская<br/>одежда</div>
+              <div className='absolute bottom-4 right-6'>
+                <img src="/runnercenter/Kid's wear.png" className='w-[195px] h-[210px]' />
+              </div>
+              <div className='bg-[#C0FD14] absolute bottom-0 right-0 p-3 flex items-center justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200'>
+                <IoIosArrowForward size={18} />
+              </div>
           </div>
-          <div className='text-[34px] font-medium mb-5'>Спецпредложение</div>
-          {productsLoading ? (<Loading />) : productsError ? (<ErrorMessage message={productsError} />) : (
-            <GridContainer>
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
-              ))}
-            </GridContainer>
-          )}
+          
+        </div>
         </div>
       </div>
+      <div className='flex mb-20'>
+        <div className='mx-auto mt-3 w-[1240px]'>
+          <div className="flex gap-5">
+            <div className='bg-[#EFEFEF] px-10 py-8 h-[256px] w-[400px] relative'>
+              <div className='text-[18px] text-[#1D1D35] '>Шиповки</div>
+              <div className='flex mt-5 gap-8'>
+                <div className='flex flex-col gap-3 text-[16px] font-light underline'>
+                  <div>Для бега</div>
+                  <div>Для прыжков</div>
+                  <div>Метания</div>
+                </div>
+              </div>
+              <div className='absolute bottom-10 right-1'>
+                <img src="/runnercenter/Ships.png" className='w-[250px]' />
+              </div>
+              
+              <div className='bg-[#C0FD14] absolute bottom-0 right-0 p-3 flex items-center justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200'>
+                <IoIosArrowForward size={18} />
+              </div>
+            </div>
+            <div className='bg-[#EFEFEF] px-10 py-8 h-[256px] w-[505px] relative'>
+              <div className='text-[18px] text-[#1D1D35]'>Одежда для бега женская</div>
+              <div className='flex mt-7 gap-3'>
+                <div className='flex flex-col gap-3 text-[16px] font-light underline'>
+                  <div>Брюки</div>
+                  <div>Тайтсы</div>
+                  <div>Шорты</div>
+                  <div>Костюмы</div>
+                </div>
+                <div className='flex flex-col gap-3 text-[16px] font-light underline'>
+                  <div>Термобелье</div>
+                  <div>Куртки</div>
+                  <div>Футболки</div>
+                </div>
+              </div>
+              <div className='absolute bottom-0 right-2'>
+                <img src="/runnercenter/Mizuno women's sweatshirt.png" className='w-[245px] h-[245px]' />
+              </div>
+              <div className='bg-[#C0FD14] absolute bottom-0 right-0 p-3 flex items-center justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200'>
+                <IoIosArrowForward size={18} />
+              </div>
+            </div>
+            <div className='bg-[#EFEFEF] px-10 py-9 h-[256px] w-[296px] relative'>
+              <div className='text-[18px] text-[#1D1D35]'>Аксессуары</div>
+              <div className='absolute bottom-4 right-10'>
+                <img src="/runnercenter/Socks.png" className='w-[203px] h-[152px]' />
+              </div>
+              <div className='bg-[#C0FD14] absolute bottom-0 right-0 p-3 flex items-center justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200'>
+                <IoIosArrowForward size={18} />
+              </div>
+          </div>
+          
+        </div>
+        </div>
+      
+      <div className='absolute bottom-0 right-0'>
+        <img src="/runnercenter/Brends.png" className='w-[250px]' />
+      </div>
+    </div>
     </Layout>
   );
 }
