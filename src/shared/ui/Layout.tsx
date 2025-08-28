@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Header } from '../../widgets';
+import { Footer, Header } from '../../widgets';
 
 interface LayoutProps {
   children: ReactNode;
@@ -12,6 +12,7 @@ export function Layout({ children }: LayoutProps) {
       <main className="">
         {children}
       </main>
+      <Footer />
     </div>
   );
 }
