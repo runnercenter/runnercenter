@@ -20,7 +20,7 @@ function IphoneToggle({ name }: { name: string }) {
     </div>
   );
 }
-// (already imported above)
+
 import { GridContainer, Layout, useProducts } from "../shared"
 import { ProductCard } from "../entities";
 import { IoChevronDown } from 'react-icons/io5';
@@ -287,7 +287,7 @@ function PriceFilter() {
 }
 
 function ColorFilter() {
-  const [colors, setColors] = useState<string[]>([
+  const [colors] = useState<string[]>([
     "#FFFFFF", "#061A84", "#C0FD14",
     "#02AEFF", "#FF4444", "#6D6D6D",
     "#0F754E", "#60BFBF", "#FF6C11",
