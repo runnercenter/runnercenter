@@ -6,7 +6,7 @@ type PaginationProps = {
   onPageSizeChange: (limit: number) => void;
 };
 
-export function Pagination({ limit, offset, total, onPageChange, onPageSizeChange }: PaginationProps) {
+export function Pagination({ limit, offset, total, onPageChange }: PaginationProps) {
     const totalPages = Math.ceil(total / limit);
     const currentPage = Math.floor(offset / limit) + 1;
 
