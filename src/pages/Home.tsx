@@ -12,6 +12,8 @@ import { GridContainer } from '../shared/ui/GridContainer';
 import { Loading, ErrorMessage } from '../shared/ui';
 import { useState } from 'react';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
+import { FaArrowRight } from 'react-icons/fa6';
+import { IoIosArrowForward } from 'react-icons/io';
 
 function Home() {
   const { products, loading: productsLoading, error: productsError, toggleLike } = useProducts();
@@ -139,6 +141,26 @@ function Home() {
       </div>
       <div className='flex mb-20'>
         <div className='mx-auto mt-10 w-[1240px]'>
+          <div className="flex gap-10">
+            <div className='bg-[#EFEFEF] px-10 py-8 relative'>
+              <div className='text-[18px] text-[#1D1D35]'>Кроссовки для бега</div>
+              <div className='flex mt-5 gap-10'>
+                <div className='flex flex-col gap-2 text-[16px] font-light'>
+                  <div>Мужские</div>
+                  <div>Женские</div>
+                  <div>Детские</div>
+                </div>
+                <div>
+                  <img src="/runnercenter/cross.png" className='mb-5' />
+                </div>
+              </div>
+              <div className='bg-[#C0FD14] absolute bottom-0 right-0 p-3 flex items-center justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200'>
+                <IoIosArrowForward size={18} />
+              </div>
+            </div>
+            <div>Одежда для бега мужская</div>
+            <div>Детская<br/>одежда</div>
+          </div>
           <div className='text-[34px] font-medium mb-5'>Спецпредложение</div>
           {productsLoading ? (<Loading />) : productsError ? (<ErrorMessage message={productsError} />) : (
             <GridContainer>
