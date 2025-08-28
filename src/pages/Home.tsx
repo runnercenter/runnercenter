@@ -12,7 +12,6 @@ import { GridContainer } from '../shared/ui/GridContainer';
 import { Loading, ErrorMessage } from '../shared/ui';
 import { useState } from 'react';
 import { IoChevronBack, IoChevronForward } from 'react-icons/io5';
-import { FaArrowRight } from 'react-icons/fa6';
 import { IoIosArrowForward } from 'react-icons/io';
 
 function Home() {
