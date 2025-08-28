@@ -137,6 +137,18 @@ function Home() {
           )}
         </div>
       </div>
+      <div className='flex mb-20'>
+        <div className='mx-auto mt-10 w-[1240px]'>
+          <div className='text-[34px] font-medium mb-5'>Спецпредложение</div>
+          {productsLoading ? (<Loading />) : productsError ? (<ErrorMessage message={productsError} />) : (
+            <GridContainer>
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
+              ))}
+            </GridContainer>
+          )}
+        </div>
+      </div>
     </Layout>
   );
 }
