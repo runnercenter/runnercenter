@@ -75,6 +75,12 @@ export function ProductFilters() {
         ))}
         <IphoneToggle name="Новая коллекция" />
         <IphoneToggle name="Товары со скидкой" />
+        <div className="text-center cursor-pointer text-white bg-[#061A84] px-10 py-3">
+          Применить
+        </div>
+        <div className="font-light text-[#A1A1A1] text-center cursor-pointer underline">
+          Сбросить фильтры
+        </div>
       </div>
     </div>
   );

@@ -43,6 +43,49 @@ export function useProducts() {
   return { products, loading, error, toggleLike };
 }
 
+// Хук для загрузки всех продуктов
+export function useAllProducts(limit: number, offset: number) {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchAllProducts() {
+      try {
+        setLoading(true);
+        const [data, total] = await api.getAllProducts(limit, offset);
+        setProducts(data);
+        setTotal(total);
+        setError(null);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Ошибка загрузки всех продуктов');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchAllProducts();
+  }, []);
+
+  const toggleLike = async (productId: number) => {
+    try {
+      const updatedProduct = await api.toggleProductLike(productId);
+      if (updatedProduct) {
+        setProducts(prev => 
+          prev.map(product => 
+            product.id === productId ? updatedProduct : product
+          )
+        );
+      }
+    } catch (err) {
+      console.error('Ошибка при изменении лайка:', err);
+    }
+  };
+
+  return { products, loading, error, toggleLike, total };
+};
+
 // Хук для загрузки брендов
 export function useBrands() {
   const [brands, setBrands] = useState<Brand[]>([]);
