@@ -43,6 +43,1545 @@ const mockProducts: Product[] = [
   }
 ];
 
+const mockAllProducts: Product[] = [
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  }, 
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 1,
+    name: "Brooks GLYCERIN 20",
+    image: "/runnercenter/products/1.jpg",
+    price: 22990,
+    discountPrice: 17750,
+    discount: 20,
+    isLiked: false
+  },
+  {
+    id: 2,
+    name: "Mizuno. WAVE RIDER 28",
+    image: "/runnercenter/products/2.jpg",
+    price: 17990,
+    isLiked: false
+  },
+  {
+    id: 3,
+    name: "Mizuno WAVE RIDER 27",
+    image: "/runnercenter/products/3.jpg",
+    price: 18990,
+    discountPrice: 14243,
+    discount: 25,
+    isLiked: true
+  },
+  {
+    id: 5,
+    name: "Brooks Adrenaline GTS 23",
+    image: "/runnercenter/products/5.png",
+    price: 17990,
+    isLiked: false
+  }
+];
+
 // Моковые данные для брендов
 const mockBrands: Brand[] = [
   {
@@ -99,6 +1638,12 @@ export const api = {
   async getProducts(): Promise<Product[]> {
     await delay(500);
     return [...mockProducts];
+  },
+
+  async getAllProducts(limit: number, offset: number): Promise<[Product[], number]> {
+    const products = [...mockAllProducts].slice(offset, offset + limit);
+    const total = mockAllProducts.length;
+    return [products, total];
   },
 
   // Получение продукта по ID

@@ -1,9 +1,22 @@
-import { GridContainer, useProducts } from "../shared";
+import { GridContainer, useAllProducts } from "../shared";
 import { ProductCard } from "../entities";
 import { ProductSorting } from "../features/product-sorting";
+import { useState } from "react";
+import { Pagination } from "../shared/ui/Pagination";
 
 export function ProductsGrid() {
-  const { products, loading: productsLoading, error: productsError, toggleLike } = useProducts();
+  const [limit, setLimit] = useState(28);
+  const [offset, setOffset] = useState(0);
+  const { products, loading: productsLoading, error: productsError, toggleLike, total: total } = useAllProducts(limit, offset);
+
+  const handlePageChange = (newOffset: number) => {
+    if (newOffset < 0 || newOffset >= total) return;
+    setOffset(newOffset);
+  };
+
+  const handlePageSizeChange = (newLimit: number) => {
+    setLimit(newLimit);
+  };
 
   return (
     <div className="w-[75%]">
@@ -22,6 +35,13 @@ export function ProductsGrid() {
           <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
         ))}
       </GridContainer>
+      <Pagination
+        limit={limit}
+        total={total}
+        offset={offset}
+        onPageChange={handlePageChange}
+        onPageSizeChange={handlePageSizeChange}
+      />
     </div>
   );
 }
