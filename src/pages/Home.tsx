@@ -161,6 +161,14 @@ function Home() {
             <div>Одежда для бега мужская</div>
             <div>Детская<br/>одежда</div>
           </div>
+          <div className='text-[34px] font-medium mb-5'>Спецпредложение</div>
+          {productsLoading ? (<Loading />) : productsError ? (<ErrorMessage message={productsError} />) : (
+            <GridContainer>
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
+              ))}
+            </GridContainer>
+          )}
         </div>
       </div>
     </Layout>
