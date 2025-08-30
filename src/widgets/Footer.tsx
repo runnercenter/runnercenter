@@ -4,7 +4,7 @@ interface FooterProps {
 
 export function Footer({ className = '' }: FooterProps) {
   return (
-    <div className={`${className} bg-[#061A84] flex text-white`}>
+    <div className={`${className} bg-[#061A84] hidden lg:flex text-white`}>
       <div className="w-[1240px] mx-auto py-10 px-10 flex gap-30">
         <div>
           <div className="font-bold text-[16px]">О нас</div>

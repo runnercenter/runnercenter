@@ -10,6 +10,7 @@ import telegramLogo from '../assets/icons/telegram.svg'
 import heartLogo from '../assets/icons/heart.svg'
 import cartLogo from '../assets/icons/cart.svg'
 import {CategoryNavBar} from "../entities/category/CategoryNavBar.tsx";
+import MobileHeader from './MobileHeader.tsx';
 
 interface HeaderProps {
   className?: string;
@@ -28,11 +29,13 @@ export function Header({ className = '' }: HeaderProps) {
       {isAdOpen && (
       <div className="bg-[#C0FD14] flex">
         <div className="w-[1240px] mx-auto flex py-2 items-center px-2">
-          <div className="text-center mx-auto font-light text-[14px]">Скидка -20% на первый заказ по промокоду</div>
+          <div className="text-center mx-auto font-light lg:text-[14px] text-[10px]">Скидка -20% на первый заказ по промокоду</div>
           <div onClick={() => setIsAdOpen(false)}><img src={closeLogo} alt="Закрыть" className="cursor-pointer object-contain" /></div>
         </div>
       </div>
       )}
+      <MobileHeader />
+      <div className='hidden lg:block'>
       <div className='bg-[#061A84]'>
         <div className="w-[1240px] mx-auto text-[14px] flex py-3 items-center px-2 text-[#8D98D0]">
           <div className='flex items-center gap-8 relative'>
@@ -100,6 +103,7 @@ export function Header({ className = '' }: HeaderProps) {
         </div>
       </div>
       <CategoryNavBar/>
+      </div>
     </header>
   );
 }

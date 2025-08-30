@@ -3,6 +3,7 @@ import Home from '../../pages/Home';
 import Shoes from '../../pages/Shoes';
 import { useEffect } from 'react';
 import Category from '../../pages/Category';
+import TestPage from '../../pages/Test';
 
 export function AppRouter() {
   useEffect(() => {
@@ -22,6 +23,7 @@ export function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/shoes" element={<Shoes />} />
         <Route path="/category" element={<Category />} />
+        <Route path="/test" element={<TestPage />} />
       </Routes>
     </Router>
   );
