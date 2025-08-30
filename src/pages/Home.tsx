@@ -248,10 +248,137 @@ function Home() {
         </div>
         </div>
       
-      <div className='absolute bottom-0 right-0'>
-        <img src="/runnercenter/Brends.png" className='w-[250px]' />
+      
+    </div>
+    <div className="overflow-hidden w-full py-8">
+      <div className="relative w-full">
+        <div
+          className="flex gap-13 items-center animate-logo-scroll whitespace-nowrap"
+          style={{ minWidth: '2000px' }}
+        >
+          <div><img src="/runnercenter/Brooks logo.png" className='opacity-75 w-[99px]' /></div>
+          <div><img src="/runnercenter/Nike logo.png" className='opacity-75 w-[75px]' /></div>
+          <div><img src="/runnercenter/Casio logo.png" className='opacity-75 w-[92px]' /></div>
+          <div><img src="/runnercenter/Mizuno logo.png" className='opacity-75 w-[79px]' /></div>
+          <div><img src="/runnercenter/UYN logo.png" className='opacity-75 w-[80px]' /></div>
+          <div><img src="/runnercenter/Skins logo.png" className='opacity-75 w-[90px]' /></div>
+          {/* Дублируем для бесшовной прокрутки */}
+          <div><img src="/runnercenter/Brooks logo.png" className='opacity-75 w-[99px]' /></div>
+          <div><img src="/runnercenter/Nike logo.png" className='opacity-75 w-[75px]' /></div>
+          <div><img src="/runnercenter/Casio logo.png" className='opacity-75 w-[92px]' /></div>
+          <div><img src="/runnercenter/Mizuno logo.png" className='opacity-75 w-[79px]' /></div>
+          <div><img src="/runnercenter/UYN logo.png" className='opacity-75 w-[80px]' /></div>
+          <div><img src="/runnercenter/Skins logo.png" className='opacity-75 w-[90px]' /></div>
+        </div>
       </div>
     </div>
+      <div className='flex mb-20'>
+        <div className='mx-auto mt-20 w-[1240px]'>
+          <div className='text-[34px] font-medium mb-5'>Спецпредложения</div>
+          {productsLoading ? (<Loading />) : productsError ? (<ErrorMessage message={productsError} />) : (
+            <GridContainer>
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
+              ))}
+            </GridContainer>
+          )}
+        </div>
+      </div>
+      <div className='flex mb-2'>
+        <div className='mx-auto mt-1 w-[1240px]'>
+          <div className="flex gap-5">
+            <div
+              className="px-10 py-10 bg-[#ECEFF3] w-[610px] h-[245px] bg-cover bg-center relative"
+              style={{
+                backgroundImage: "url('/runnercenter/bg_with_arrow.png')",
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
+              }}
+            >
+              <div className='text-[34px] text-[#1D1D35] mt-1'> Mizuno</div>
+              <div className='flex gap-8'>
+                <div className='flex flex-col gap-10 text-[#1D1D35] text-[20px] font-light '>
+                  <div>Новая коллекция<br/>кроссовок</div>
+                </div>
+              </div>
+              <img
+                src="/runnercenter/New_mizuno_shoes.png"
+                alt="Mizuno Shoes"
+                className="w-[300px] absolute right-0 bottom-0 "
+              
+              />
+            </div>
+            <div
+              className="px-10 py-10 bg-[#ECEFF3] w-[610px] h-[245px] bg-cover bg-center relative"
+              style={{
+                backgroundImage: "url('/runnercenter/bg_with_arrow.png')",
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
+              }}
+            >
+              <div className='text-[34px] text-[#1D1D35] mt-1'> Nordski</div>
+              <div className='flex gap-8'>
+                <div className='flex flex-col gap-10 text-[#1D1D35] text-[20px] font-light '>
+                  <div>Новая коллекция<br/>одежды</div>
+                </div>
+              </div>
+              <img
+                src="/runnercenter/New_nordski.png"
+                alt="Mizuno Shoes"
+                className="w-[300px] absolute right-0 bottom-0 "
+              
+              />
+            </div>
+            </div>
+          </div>
+        </div>
+      <div className='flex mb-20'>
+        <div className='mx-auto mt-20 w-[1240px]'>
+          <div className='text-[34px] font-medium mb-5'>Популярное</div>
+          {productsLoading ? (<Loading />) : productsError ? (<ErrorMessage message={productsError} />) : (
+            <GridContainer>
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} onToggleLike={toggleLike} />
+              ))}
+            </GridContainer>
+          )}
+        </div>
+      </div>
+      <div className='flex mb-20'>
+        <div className='mx-auto mt-20 w-[1240px]'>
+          <div className='text-[34px] font-medium mb-5'>Новое в блоге</div>
+           <div className='flex gap-4 items-center'>
+           <div>
+            <img src="/runnercenter/Blog1.png"  />
+           <div className='text-[16px] font-medium mt-3'>Эволюция модели Saucony<br/>Triumph</div>
+           </div>
+           <div>
+            <img src="/runnercenter/Blog2.png"  />
+           <div className='text-[16px] font-medium mt-3'>Руки в тепле: выбираем<br/>перчатки для бега...</div>
+           </div>
+           <div>
+            <img src="/runnercenter/Blog3.png"  />
+           <div className='text-[16px] font-medium mt-3'>Как выбрать термобелье<br/>для тренировок в холод</div>
+           </div>
+           <div>
+            <img src="/runnercenter/Blog4.png" />
+           <div className='text-[16px] font-medium mt-3'>Как выбрать кроссовки для<br/>марафона?</div>
+           </div>
+           <div>
+            <img src="/runnercenter/Blog5.png"  />
+           <div className='text-[16px] font-medium mt-3'>Как выбрать кроссовки<br/>для марафона?</div>
+           </div>
+           </div>
+            
+            
+            
+            
+           
+           
+        </div>
+      </div>
     </Layout>
   );
 }
