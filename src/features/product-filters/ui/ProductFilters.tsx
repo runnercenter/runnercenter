@@ -30,7 +30,7 @@ export function ProductFilters() {
   };
 
   return (
-    <div className="w-[25%] pr-10">
+    <div className="hidden lg:block lg:w-[25%] pr-10">
       <div className="flex flex-col gap-[20px] pb-[30px] mb-[30px] border-b border-[#E4E4E4]">
         <div className="text-[16px] text-[#1D1D35] font-light">Для мужчин</div>
         <div className="text-[16px] text-[#1D1D35] font-light">Для женщин</div>
