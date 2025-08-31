@@ -31,7 +31,7 @@ export function ProductSorting() {
       </div>
       <div className="ml-auto relative">
         <div 
-          className={`border border-[#E4E4E4] px-5 py-2 cursor-pointer flex items-center gap-3 bg-white lg:min-w-[200px] ${isSelectOpen ? 'border-b-white' : 'border-white'} `}
+          className={`border border-[#E4E4E4] px-5 pr-2 lg:pr-5 py-2 cursor-pointer flex items-center gap-3 bg-white lg:min-w-[200px] ${isSelectOpen ? 'border-b-white' : 'border-white'} `}
           onClick={() => setIsSelectOpen(!isSelectOpen)}
         >
           <span className="text-[#1D1D35] flex-1">{selectedSort}</span>
