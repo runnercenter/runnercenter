@@ -1,69 +1,150 @@
-# React + TypeScript + Vite
+# Описание архитектуры, процессов и стандартов работы
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Оглавление
 
-Currently, two official plugins are available:
+1. [Общие правила работы](#общие-правила-работы)
+2. [Архитектура проекта (FSD)](#архитектура-проекта-fsd)
+3. [Git Flow и работа с ветками](#git-flow-и-работа-с-ветками)
+4. [Процесс запуска и деплоя](#процесс-запуска-и-деплоя)
+5. [Тестирование](#тестирование)
+6. [Код-ревью и коммуникация](#код-ревью-и-коммуникация)
+7. [Полезные ссылки](#полезные-ссылки)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 1. Общие правила работы
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Соблюдайте архитектурные принципы FSD (Feature-Sliced Design).
+- Для каждой задачи создавайте отдельную ветку от `master` или `develop`.
+- Все изменения проходят через Pull Request (PR) и обязательное ревью.
+- Не вносите изменения напрямую в основные ветки.
+- Пишите осмысленные сообщения коммитов (на русском или английском, в пассивном залоге, кратко и по существу).
+- Регулярно синхронизируйте свою ветку с основной, чтобы избежать конфликтов.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 2. Архитектура проекта (FSD)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+В проекте используется Feature-Sliced Design ([feature-sliced.design](https://feature-sliced.design/ru/)) — подход, который структурирует фронтенд по слоям и функциональным областям.
+
+### Основные слои:
+
+- **app** — инициализация приложения, глобальные провайдеры, роутинг
+- **processes** — бизнес-процессы, объединяющие несколько фич
+- **pages** — страницы приложения
+- **widgets** — крупные независимые блоки, собирающие фичи и сущности
+- **features** — отдельные пользовательские сценарии (например, фильтрация, сортировка)
+- **entities** — бизнес-сущности (товар, пользователь, заказ)
+- **shared** — переиспользуемые компоненты, утилиты, типы, стили
+
+### Принципы FSD:
+
+- **Изоляция слоёв:** Каждый слой может использовать только нижележащие слои.
+- **Переиспользуемость:** Компоненты и модули должны быть независимыми и легко переносимыми.
+- **Явная структура:** Новые фичи и бизнес-сценарии выносятся в отдельные директории.
+- **Минимизация связей:** Не допускается импортировать из верхних слоёв в нижние.
+
+### Пример структуры:
+
+```
+src/
+	app/
+	processes/
+	pages/
+	widgets/
+	features/
+	entities/
+	shared/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Подробнее: [Документация FSD](https://feature-sliced.design/ru/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 3. Git Flow и работа с ветками
+
+### Основные правила:
+
+- Для каждой задачи создавайте отдельную ветку от `master` или `develop`:
+	- `feature/<название>` — новые функции
+	- `bugfix/<номер_тикета>` — исправления багов
+	- `hotfix/<описание>` — экстренные исправления
+- Формат сообщений коммитов: кратко, что и почему изменено. Пример: `Добавлен фильтр по бренду; Исправлена пагинация;`
+- Перед созданием PR убедитесь, что локально проходят все тесты и линтеры.
+- В описании PR указывайте:
+	- Что было сделано
+	- Номер задачи/тикета
+	- Причину экстренного слияния (если требуется)
+- Все изменения проходят код-ревью. Без одобрения ответственного разработчика слияние не допускается.
+- После слияния ветки удаляйте её из удалённого репозитория.
+
+### Пример Git Flow:
+
+1. `git checkout master`
+2. `git pull`
+3. `git checkout -b feature/название`
+4. Работа над задачей, коммиты
+5. `git push origin feature/название`
+6. Создание Pull Request
+7. Код-ревью и слияние в основную ветку
+
+---
+
+## 4. Процесс запуска и деплоя
+
+### Запуск проекта локально:
+
+1. Клонируйте репозиторий:
+	 ```
+	 git clone https://github.com/aidosgal/runnercenter.git
+	 ```
+2. Установите зависимости:
+	 ```
+	 npm install
+	 ```
+3. Запустите проект:
+	 ```
+	 npm run dev
+	 ```
+
+### Деплой:
+
+- Для деплоя используется GitHub Pages и GitHub Actions.
+- Все изменения должны попадать в основную ветку через PR.
+- После слияния ветки деплой происходит автоматически.
+
+---
+
+## 5. Тестирование
+
+- Для каждого нового компонента или функции пишите тесты.
+- Используйте unit-тесты для логики и компонентные тесты для UI.
+- Перед созданием PR убедитесь, что все тесты проходят:
+	```
+	npm run test
+	```
+- Покрытие тестами должно быть не ниже 80% для новых модулей.
+
+---
+
+## 6. Код-ревью и коммуникация
+
+- Код-ревью обязательно для всех изменений.
+- Перед отправкой на ревью проверьте код на соответствие линтерам и форматированию.
+- В обсуждениях используйте понятные и конструктивные комментарии.
+- Регулярно информируйте команду о статусе задач через тикеты, PR или чаты.
+
+---
+
+## 7. Полезные ссылки
+
+- [Feature-Sliced Design](https://feature-sliced.design/ru/)
+- [Conventional Commits](https://www.conventionalcommits.org/ru/v1.0.0/)
+- [Документация React](https://react.dev/)
+- [Документация Vite](https://vitejs.dev/)
+- [Документация GitHub Actions](https://docs.github.com/en/actions)
+
+---
+
+**Соблюдение этих стандартов обеспечивает чистую архитектуру, удобство поддержки и прозрачность командной работы.**
+# Runner Center
