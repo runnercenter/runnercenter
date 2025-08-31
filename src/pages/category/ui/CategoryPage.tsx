@@ -6,17 +6,17 @@ export function CategoryPage() {
   return (
     <Layout>
       <div className="flex">
-        <div className="w-[1240px] mx-auto mb-20">
-          <div className='flex gap-5 font-light text-[14px] mt-8'>
+        <div className="lg:w-[1240px] lg:mx-auto lg:mb-20">
+          <div className='flex gap-5 font-light text-[14px] mt-8 px-3 lg:px-0'>
             <div>Главная</div>
             <div className="text-[#6D6D6D]">/</div>
             <div className="text-[#6D6D6D]">Каталог</div>
           </div>
-          <div className="text-[34px] font-bold text-[#1D1D35] mt-2">Кроссовки для бега с поддержкой</div>
-          
+          <div className="lg:text-[34px] text-[28px] font-bold text-[#1D1D35] mt-2 px-3 lg:px-0">Кроссовки для бега с поддержкой</div>
+
           <CategoryNavigation />
           
-          <div className="flex mt-10">
+          <div className="block lg:flex mt-10">
             <ProductFilters />
             <ProductsGrid />
           </div>

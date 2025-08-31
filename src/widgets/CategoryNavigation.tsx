@@ -10,12 +10,12 @@ export function CategoryNavigation() {
   const [selectedType, setSelectedType] = useState<string | null>("Для трейла");
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-2 lg:gap-4 px-3 lg:px-0 mt-2">
       {types.map((type) => (
         <div 
           key={type}
           onClick={() => setSelectedType(type)}
-          className={`text-[14px] px-5 py-3 mt-5 cursor-pointer select-none ${
+          className={`text-[14px] px-5 py-3 lg:mt-5 cursor-pointer select-none ${
             selectedType === type 
             ? 'bg-[#D7DFEF] text-[#1D1D35]' 
             : 'bg-[#EFEFEF] text-[#6D6D6D] hover:bg-[#D7DFEF] hover:text-[#1D1D35] transition-colors duration-300 ease-in-out'
