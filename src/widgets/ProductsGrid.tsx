@@ -1,4 +1,4 @@
-import { GridContainer, useAllProducts } from "../shared";
+import { useAllProducts } from "../shared";
 import { ProductCard } from "../entities";
 import { ProductSorting } from "../features/product-sorting";
 import { useState } from "react";
