@@ -6,7 +6,7 @@ export function CategoryPage() {
   return (
     <Layout>
       <div className="flex">
-        <div className="lg:w-[1240px] lg:mx-auto lg:mb-20">
+        <div className="lg:w-[1240px] lg:mx-auto lg:mb-20 mb-10">
           <div className='flex gap-5 font-light text-[14px] mt-8 px-3 lg:px-0'>
             <div>Главная</div>
             <div className="text-[#6D6D6D]">/</div>
@@ -16,7 +16,7 @@ export function CategoryPage() {
 
           <CategoryNavigation />
           
-          <div className="block lg:flex mt-10">
+          <div className="block lg:flex lg:mt-10 mt-2">
             <ProductFilters />
             <ProductsGrid />
           </div>

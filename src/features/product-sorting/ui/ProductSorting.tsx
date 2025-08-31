@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { BsSliders } from "react-icons/bs";
 import { IoChevronDown } from 'react-icons/io5';
+import MobileProductFilter from "../../product-filters/ui/MobileProductFilter";
 
 export function ProductSorting() {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
   const [selectedSort, setSelectedSort] = useState("Самые популярные");
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   
   const sortOptions = [
     "Самые популярные",
@@ -18,10 +21,17 @@ export function ProductSorting() {
   };
 
   return (
-    <div className="flex w-full mb-5">
+    <div className="flex w-full mb-5 lg:text-[14px] text-[12px]">
+      {isMobileFilterOpen && (
+        <MobileProductFilter onClose={() => setIsMobileFilterOpen(false)} /> 
+      )}
+      <div className="flex lg:hidden items-center ml-3 gap-3" onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}>
+        <BsSliders size={14}/>
+        <div className="text-[12px] font-light">Фильтры</div>
+      </div>
       <div className="ml-auto relative">
         <div 
-          className={`border border-[#E4E4E4]  px-5 py-2 cursor-pointer flex items-center gap-3 bg-white min-w-[200px] ${isSelectOpen ? 'border-b-white' : 'border-white'} `}
+          className={`border border-[#E4E4E4] px-5 py-2 cursor-pointer flex items-center gap-3 bg-white lg:min-w-[200px] ${isSelectOpen ? 'border-b-white' : 'border-white'} `}
           onClick={() => setIsSelectOpen(!isSelectOpen)}
         >
           <span className="text-[#1D1D35] flex-1">{selectedSort}</span>

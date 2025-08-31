@@ -12,10 +12,10 @@ export function Pagination({ limit, offset, total, onPageChange }: PaginationPro
 
     return (
         <div className="block lg:flex items-center mt-10">
-            <div className="px-12 text-center lg:whitespace-nowrap py-3 bg-[#061A84] text-[15px] text-white cursor-pointer" onClick={() => onPageChange(offset + limit)}>Показать еще</div>
+            <div className="lg:px-12 text-center lg:whitespace-nowrap py-3 bg-[#061A84] text-[12px] lg:text-[15px] text-white cursor-pointer" onClick={() => onPageChange(offset + limit)}>Показать еще</div>
             <div className="justify-between lg:justify-end w-full mt-4 lg:mt-0 flex ml-auto items-center gap-2">
                 <div 
-                    className="border border-[#E4E4E4] py-3 px-7 cursor-pointer"
+                    className="border border-[#E4E4E4] py-3 text-center lg:text-[15px] text-[12px] w-full lg:w-auto lg:px-7 cursor-pointer"
                     onClick={() => onPageChange(offset - limit)}
                 >
                     Назад
@@ -26,7 +26,7 @@ export function Pagination({ limit, offset, total, onPageChange }: PaginationPro
                             {Array.from({ length: Math.min(currentPage + 2, totalPages) }, (_, i) => (
                                 <div 
                                     key={i} 
-                                    className={`px-5 border py-3 cursor-pointer ${i === currentPage - 1 ? 'border-[#061A84] bg-[#061A84] text-white' : 'border-[#E4E4E4] text-[#1D1D35]'}`} 
+                                    className={`px-5 text-[12px] lg:text-[15px] border py-3 cursor-pointer ${i === currentPage - 1 ? 'border-[#061A84] bg-[#061A84] text-white' : 'border-[#E4E4E4] text-[#1D1D35]'}`} 
                                     onClick={() => onPageChange(i * limit)}
                                 >
                                     {i + 1}
@@ -41,7 +41,7 @@ export function Pagination({ limit, offset, total, onPageChange }: PaginationPro
                                     return (
                                         <div 
                                             key={pageNum} 
-                                            className={`px-5 border py-3 cursor-pointer ${pageNum === currentPage ? 'border-[#061A84] bg-[#061A84] text-white' : 'border-[#E4E4E4] text-[#1D1D35]'}`} 
+                                            className={`px-5 text-[12px] lg:text-[15px] border py-3 cursor-pointer ${pageNum === currentPage ? 'border-[#061A84] bg-[#061A84] text-white' : 'border-[#E4E4E4] text-[#1D1D35]'}`} 
                                             onClick={() => onPageChange((pageNum - 1) * limit)}
                                         >
                                             {pageNum}
@@ -56,19 +56,19 @@ export function Pagination({ limit, offset, total, onPageChange }: PaginationPro
                 {(currentPage + 1 != totalPages && currentPage != totalPages) && (
                     <div className="hidden lg:flex items-center gap-2">
                         <div
-                            className={`px-5 border py-3 cursor-pointer border-[#E4E4E4] text-[#1D1D35]`}
+                            className={`px-5 border py-3 text-[12px] lg:text-[15px] cursor-pointer border-[#E4E4E4] text-[#1D1D35]`}
                         >
                             ...
                         </div>
                         <div
-                            className={`px-5 border py-3 cursor-pointer ${totalPages === currentPage ? 'border-[#061A84] bg-[#061A84] text-white' : 'border-[#E4E4E4] text-[#1D1D35]'}`}
+                            className={`px-5 border py-3 text-[12px] lg:text-[15px] cursor-pointer ${totalPages === currentPage ? 'border-[#061A84] bg-[#061A84] text-white' : 'border-[#E4E4E4] text-[#1D1D35]'}`}
                         >
                             {totalPages}
                         </div>
                     </div>
                 )}
                 <div
-                    className="border border-[#E4E4E4] py-3 px-7 cursor-pointer"
+                    className="border border-[#E4E4E4] py-3 text-center lg:text-[15px] text-[12px] w-full lg:w-auto lg:px-7 cursor-pointer"
                     onClick={() => onPageChange(offset + limit)}
                 >
                     Далее

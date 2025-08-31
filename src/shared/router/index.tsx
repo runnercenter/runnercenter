@@ -20,9 +20,9 @@ export function AppRouter() {
   return (
     <Router basename="/runnercenter">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/category" element={<Home />} />
         <Route path="/shoes" element={<Shoes />} />
-        <Route path="/category" element={<Category />} />
+        <Route path="/" element={<Category />} />
         <Route path="/test" element={<TestPage />} />
       </Routes>
     </Router>
